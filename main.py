@@ -32,9 +32,11 @@ if __name__ == "__main__":
         'Quantity': np.random.randint(1, 10, size=num_orders),
     }
 
-    # Finding customer name and product name
+    # Finding customer name
     data['Customer Name'] = customers_df.loc[data['Customer ID'] -
                                              1, 'Customer Name'].values
+    
+    # Finding product name
     data['Product Name'] = products_df.loc[data['Product ID'] -
                                            1, 'Product Name'].values
 
